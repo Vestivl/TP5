@@ -1,21 +1,19 @@
-import Item from './Item.js';
-import Inventory from './Inventory.js';
+// main.js
+import factorial from './factorial.js';
+import { fibonacci, fibonacciSeries } from './fibonacci.js';
 
-const inventory = new Inventory();
+const numberForFactorial = 5;
+console.log(`Faktorial dari ${numberForFactorial} adalah ${factorial(numberForFactorial)}`);
+/**
+ * Output yang diharapkan:
+ * Faktorial dari 5 adalah 120
+ */
 
-const item1 = new Item(1, 'Laptop', 10, 1000);
-const item2 = new Item(2, 'Mouse', 50, 20);
-
-inventory.addItem(item1);
-inventory.addItem(item2);
-
-console.log('Initial Inventory:');
-console.log(inventory.listItems());
-
-item1.updateDetails('Laptop', 8, 950);
-console.log('\nInventory after update:');
-console.log(inventory.listItems());
-
-inventory.removeItem(2);
-console.log('\nInventory after removal:');
-console.log(inventory.listItems());
+const numberForFibonacci = 10;
+console.log(`Deret Fibonacci hingga elemen ${numberForFibonacci} adalah:`);
+console.log(fibonacciSeries(numberForFibonacci));
+/**
+ * Output yang diharapkan:
+ * Deret Fibonacci hingga elemen 10 adalah:
+ * [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+ */
